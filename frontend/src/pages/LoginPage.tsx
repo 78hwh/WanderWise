@@ -46,11 +46,11 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-6">
+    <div className="min-h-[calc(100dvh-7rem)] md:min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 sm:px-6 py-8">
       <div className="w-full max-w-md">
         {/* 标题 */}
-        <div className="text-center mb-8">
-          <h1 className="font-serif text-3xl text-shadow mb-2">
+        <div className="text-center mb-6 sm:mb-8">
+          <h1 className="font-serif text-2xl sm:text-3xl text-shadow mb-2">
             {isRegister ? '加入 WanderWise' : '欢迎回来'}
           </h1>
           <p className="text-sage text-sm">
@@ -61,7 +61,7 @@ export default function LoginPage() {
         {/* 表单 */}
         <form
           onSubmit={handleSubmit}
-          className="bg-snow rounded-2xl p-8 shadow-[0_2px_16px_rgba(45,90,39,0.06)] space-y-5"
+          className="bg-snow rounded-2xl p-6 sm:p-8 shadow-[0_2px_16px_rgba(45,90,39,0.06)] space-y-4 sm:space-y-5"
         >
           {isRegister && (
             <div>

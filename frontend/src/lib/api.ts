@@ -1,5 +1,5 @@
-/** 后端 API 基础地址（开发时通过 Vite proxy 转发，生产时需改为实际地址） */
-const BASE_URL = "";
+/** 后端 API 基础地址（开发时通过 Vite proxy 转发，生产时需设置环境变量） */
+const BASE_URL = import.meta.env.VITE_API_URL || "";
 
 /** 存储 JWT Token */
 let token: string | null = localStorage.getItem("token");

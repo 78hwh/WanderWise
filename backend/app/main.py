@@ -11,9 +11,11 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="WanderWise - 智能旅行助手", version="0.1.0")
 
+# CORS: 开发阶段允许所有来源；生产时通过 .env 中的 FRONTEND_URL 精确控制
+cors_origins = [settings.FRONTEND_URL] if settings.FRONTEND_URL != "*" else ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 开发阶段允许所有来源（含手机访问）
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

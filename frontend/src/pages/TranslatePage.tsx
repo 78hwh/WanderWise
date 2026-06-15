@@ -54,8 +54,8 @@ export default function TranslatePage() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12">
-      <h1 className="font-serif text-2xl text-shadow mb-6">🌐 翻译</h1>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <h1 className="font-serif text-xl sm:text-2xl text-shadow mb-6">🌐 翻译</h1>
 
       {/* 源语言文本 */}
       <div className="mb-4">
@@ -73,29 +73,31 @@ export default function TranslatePage() {
       </div>
 
       {/* 目标语言选择 */}
-      <div className="flex items-center gap-3 mb-4">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4">
         <span className="text-sm text-sage shrink-0">翻译为</span>
-        <select
-          value={targetLang}
-          onChange={(e) => setTargetLang(e.target.value)}
-          className="flex-1 px-3 py-2 bg-snow border border-fern/50 rounded-xl text-sm
-            focus:outline-none focus:border-moss focus:ring-2 focus:ring-moss/20 transition-all"
-        >
-          {LANGUAGES.map((l) => (
-            <option key={l.code} value={l.code}>
-              {l.label}
-            </option>
-          ))}
-        </select>
-        <button
-          onClick={handleTranslate}
-          disabled={loading || !text.trim()}
-          className="px-6 py-2 bg-evergreen text-snow rounded-full font-medium text-sm
-            hover:bg-shadow transition-all duration-300
-            disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {loading ? "翻译中..." : "翻译"}
-        </button>
+        <div className="flex items-center gap-2">
+          <select
+            value={targetLang}
+            onChange={(e) => setTargetLang(e.target.value)}
+            className="flex-1 sm:w-auto px-3 py-2 bg-snow border border-fern/50 rounded-xl text-sm
+              focus:outline-none focus:border-moss focus:ring-2 focus:ring-moss/20 transition-all min-h-[44px]"
+          >
+            {LANGUAGES.map((l) => (
+              <option key={l.code} value={l.code}>
+                {l.label}
+              </option>
+            ))}
+          </select>
+          <button
+            onClick={handleTranslate}
+            disabled={loading || !text.trim()}
+            className="px-5 py-2 bg-evergreen text-snow rounded-full font-medium text-sm
+              hover:bg-shadow transition-all duration-300
+              disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] shrink-0"
+          >
+            {loading ? "翻译中..." : "翻译"}
+          </button>
+        </div>
       </div>
 
       {error && <p className="text-sm text-amber mb-4">{error}</p>}

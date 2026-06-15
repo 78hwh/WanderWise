@@ -92,15 +92,15 @@ export default function RecommendPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="font-serif text-2xl text-shadow mb-6">🔮 智能推荐</h1>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <h1 className="font-serif text-xl sm:text-2xl text-shadow mb-6">🔮 智能推荐</h1>
 
       {/* 筛选表单 */}
       <form
         onSubmit={handleSubmit}
         className="bg-snow rounded-2xl p-6 shadow-[0_2px_16px_rgba(45,90,39,0.06)] space-y-4 mb-8"
       >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           <div>
             <label className="block text-sm text-shadow mb-1">旅行风格</label>
             <select

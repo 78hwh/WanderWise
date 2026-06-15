@@ -27,9 +27,9 @@ function RedirectIfAuth({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <div className="min-h-screen bg-mist">
+    <div className="min-h-screen bg-mist pb-14 md:pb-0">
       <Header />
-      <main>
+      <main className="safe-top safe-bottom">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route

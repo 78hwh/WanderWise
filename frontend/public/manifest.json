@@ -1,0 +1,26 @@
+{
+  "name": "WanderWise - 智能旅行助手",
+  "short_name": "WanderWise",
+  "description": "AI 驱动的智能旅行助手，行程规划、偏好记忆、对话交互",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F4F7F4",
+  "theme_color": "#2D5A27",
+  "categories": ["travel", "productivity"],
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

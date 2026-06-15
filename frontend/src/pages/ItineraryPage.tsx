@@ -94,7 +94,7 @@ function GenerateForm({
     >
       <h2 className="font-serif text-lg text-shadow">✨ 生成新行程</h2>
 
-      <div className="grid sm:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
         <div>
           <label className="block text-sm text-shadow mb-1">目的地 *</label>
           <input
@@ -367,8 +367,8 @@ export default function ItineraryPage() {
 
   // ---- 主界面 ----
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="font-serif text-2xl text-shadow mb-6">🗺️ 我的行程</h1>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <h1 className="font-serif text-xl sm:text-2xl text-shadow mb-6">🗺️ 我的行程</h1>
 
       {/* 生成表单 */}
       <div className="mb-8">
