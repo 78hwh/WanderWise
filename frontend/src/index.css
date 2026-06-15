@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* ===== 森林色系设计 ===== */
+@theme {
+  /* 核心色调 */
+  --color-evergreen:   #2D5A27;   /* 深林绿 — 主色调 */
+  --color-fern:        #8FB996;   /* 蕨叶绿 — 浅绿辅助 */
+  --color-moss:        #6B8E6B;   /* 苔藓绿 — 点缀 */
+  --color-amber:       #C9A76E;   /* 琥珀 — 暖调高亮 */
+  --color-sky:         #87CEEB;   /* 天空蓝 — 不变 */
+
+  /* 中性色 */
+  --color-mist:        #F4F7F4;   /* 晨雾白 — 页面背景 */
+  --color-snow:        #FBFCFB;   /* 雪白 — 卡片背景 */
+  --color-charcoal:    #3C3C3C;   /* 炭黑 — 正文 */
+  --color-shadow:      #2A3A2A;   /* 林荫暗色 — 深色文字/按钮 */
+  --color-sage:        #7D8F7D;   /* 鼠尾草灰绿 — 辅助文字 */
+
+  /* 字体 */
+  --font-serif: "Noto Serif SC", serif;
+  --font-sans:  "Noto Sans SC", sans-serif;
+}
+
+/* ===== 全局样式 ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-mist);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== 自定义滚动条 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-fern);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-evergreen);
+}
